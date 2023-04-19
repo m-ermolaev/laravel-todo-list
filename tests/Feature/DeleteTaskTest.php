@@ -16,12 +16,13 @@ class DeleteTaskTest extends TestCase
      */
     public function test_delete_task()
     {
+       $testTaskName = 'test_name';
         $task = Task::factory()->create([
-            'name' => 'Go to market',
+            'name' => $testTaskName,
         ]);
         $this->assertModelExists($task);
         $this->assertDatabaseHas('tasks', [
-            'name' => $task->name
+            'name' => $testTaskName
         ]);
         $task->delete();
         $this->assertDeleted($task);
