@@ -11,9 +11,7 @@ class CreateTask extends Component
 
     public function handleCreateClick()
     {
-        $task = new Task;
-        $task->name = $this->name;
-        $task->save();
+        Task::create(['name'=>$this->name]);
 
         $this->name = '';
         $this->emit('refreshList');
