@@ -27,7 +27,7 @@ class DeleteTaskTest extends TestCase
         $task->delete();
         $this->assertDeleted($task);
         $this->assertDatabaseMissing('tasks', [
-            'name' => $task->name
+            'name' => $testTaskName
         ]);
     }
 }
