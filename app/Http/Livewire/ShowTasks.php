@@ -7,6 +7,8 @@ use App\Models\Task;
 
 class ShowTasks extends Component
 {
+    protected $listeners = ['refreshList' => '$refresh'];
+
     public function handleDeleteClick($id)
     {
         Task::find($id)->delete();

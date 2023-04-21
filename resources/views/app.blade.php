@@ -405,8 +405,11 @@
     @livewireStyles
 </head>
 
-<body class="antialiased">
-    <livewire:show-tasks />
+<body class="antialiased ml-4 mt-4">
+    <livewire:create-task />
+    <div class="mt-4">
+        <livewire:show-tasks />
+    </div>
     @livewireScripts
 </body>
 
